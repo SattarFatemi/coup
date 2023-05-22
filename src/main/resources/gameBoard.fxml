@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="794.0" prefWidth="1545.0" style="-fx-background-color: #181520;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiControllers.GameBoard">
+   <children>
+      <Pane prefHeight="814.0" prefWidth="110.0" style="-fx-background-color: #dc143c;">
+         <children>
+            <Button fx:id="hintButton" layoutX="17.0" layoutY="21.0" mnemonicParsing="false" onAction="#toggleHintPagePane" onKeyPressed="#toggleHintPagePaneByTab" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: #181520;" text="Rahnama" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <VBox layoutX="162.0" layoutY="20.0" prefHeight="257.0" prefWidth="290.0">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="399.0">
+               <children>
+                  <Label fx:id="player1NameLabel" prefHeight="66.0" prefWidth="148.0" text="Player Name" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat ExtraBold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="146.0">
+                     <children>
+                        <Label fx:id="player1CoinsLabel" style="-fx-border-color: #dc143c; -fx-border-radius: 3; -fx-border-width: 4;" text="5" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat ExtraBold" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="8.0" left="12.0" right="12.0" top="8.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="187.0" prefWidth="335.0" spacing="30.0">
+               <children>
+                  <ImageView fx:id="player1FirstCardImageView" fitHeight="191.0" fitWidth="130.0" onMousePressed="#flipCard11" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@CardImages/Ambassador.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="player1SecondCardImageView" fitHeight="191.0" fitWidth="130.0" layoutX="10.0" layoutY="10.0" onMousePressed="#flipCard12" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@CardImages/backOfCard.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane layoutX="1115.0" layoutY="27.0" prefHeight="724.0" prefWidth="378.0" style="-fx-border-color: #dc143c; -fx-border-radius: 3; -fx-border-width: 4;" />
+      <ScrollPane layoutX="1117.0" layoutY="31.0" prefHeight="718.0" prefWidth="390.0" style="-fx-background-color: none; -fx-background: none;">
+         <content>
+            <VBox fx:id="recentEventsContainerVBox" alignment="TOP_CENTER" prefHeight="685.0" prefWidth="367.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <VBox layoutX="558.0" layoutY="20.0" prefHeight="257.0" prefWidth="290.0">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="399.0">
+               <children>
+                  <Label fx:id="player2NameLabel" prefHeight="66.0" prefWidth="148.0" text="Player Name" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat ExtraBold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="146.0">
+                     <children>
+                        <Label fx:id="player2CoinsLabel" style="-fx-border-color: #dc143c; -fx-border-radius: 3; -fx-border-width: 4;" text="5" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat ExtraBold" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="8.0" left="12.0" right="12.0" top="8.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="187.0" prefWidth="335.0" spacing="30.0">
+               <children>
+                  <ImageView fx:id="player2FirstCardImageView" fitHeight="191.0" fitWidth="130.0" onMousePressed="#flipCard21" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@CardImages/Commander.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="player2SecondCardImageView" fitHeight="191.0" fitWidth="130.0" layoutX="10.0" layoutY="10.0" onMousePressed="#flipCard22" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@CardImages/Murderer.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="558.0" layoutY="493.0" prefHeight="257.0" prefWidth="290.0">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="399.0">
+               <children>
+                  <Label fx:id="player4NameLabel" prefHeight="66.0" prefWidth="148.0" text="Player Name" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat ExtraBold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="146.0">
+                     <children>
+                        <Label fx:id="player4CoinsLabel" style="-fx-border-color: #dc143c; -fx-border-radius: 3; -fx-border-width: 4;" text="5" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat ExtraBold" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="8.0" left="12.0" right="12.0" top="8.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="187.0" prefWidth="335.0" spacing="30.0">
+               <children>
+                  <ImageView fx:id="player4FirstCardImageView" fitHeight="191.0" fitWidth="130.0" onMousePressed="#flipCard41" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@CardImages/backOfCard.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="player4SecondCardImageView" fitHeight="191.0" fitWidth="130.0" layoutX="10.0" layoutY="10.0" onMousePressed="#flipCard42" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@CardImages/backOfCard.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="162.0" layoutY="493.0" prefHeight="257.0" prefWidth="290.0">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="399.0">
+               <children>
+                  <Label fx:id="player3NameLabel" prefHeight="66.0" prefWidth="148.0" text="Player Name" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat ExtraBold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="146.0">
+                     <children>
+                        <Label fx:id="player3CoinsLabel" style="-fx-border-color: #dc143c; -fx-border-radius: 3; -fx-border-width: 4;" text="5" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat ExtraBold" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="8.0" left="12.0" right="12.0" top="8.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="187.0" prefWidth="335.0" spacing="30.0">
+               <children>
+                  <ImageView fx:id="player3FirstCardImageView" fitHeight="191.0" fitWidth="130.0" onMousePressed="#flipCard31" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@CardImages/Rich.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="player3SecondCardImageView" fitHeight="191.0" fitWidth="130.0" layoutX="10.0" layoutY="10.0" onMousePressed="#flipCard32" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@CardImages/backOfCard.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="actionButtonsVBox" alignment="TOP_CENTER" layoutX="897.0" layoutY="25.0" prefHeight="405.0" prefWidth="190.0" spacing="10.0">
+         <children>
+            <Label prefHeight="22.0" prefWidth="72.0" text="Eghdam" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="ambassadorActionButton" mnemonicParsing="false" onAction="#ambassadorAction" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Safir" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="commanderActionButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#commanderAction" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Farmandeh" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="murdererActionButton" layoutX="24.0" layoutY="79.0" mnemonicParsing="false" onAction="#murdererAction" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Adamkosh" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <HBox prefHeight="44.0" prefWidth="190.0" spacing="10.0">
+               <children>
+                  <Button fx:id="gainOneCoinButton" mnemonicParsing="false" onAction="#gainOneCoin" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: #dc143c;" text="1 sekkeh" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Medium" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gainTwoCoinsButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#gainTwoCoins" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: #dc143c;" text="2 sekkeh" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Medium" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Button fx:id="richActionButton" layoutX="24.0" layoutY="188.0" mnemonicParsing="false" onAction="#princeAction" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Bozorgzadeh (3 sekkeh)" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="coupButton" layoutX="10.0" layoutY="260.0" mnemonicParsing="false" onAction="#coup" prefHeight="44.0" prefWidth="190.0" style="-fx-background-color: #dc143c;" text="Koodeta" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="changeCardButton" layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#changeCard" prefHeight="44.0" prefWidth="190.0" style="-fx-background-color: #dc143c;" text="Moavezeh" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="hintPagePane" layoutX="107.0" opacity="0.0" prefHeight="814.0" prefWidth="747.0" style="-fx-background-color: #dc143c;" visible="false">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </Pane>
+      <VBox fx:id="selectTributeTargetPlayerVBox" alignment="TOP_CENTER" layoutX="897.0" layoutY="557.0" prefHeight="191.0" prefWidth="190.0" spacing="10.0" visible="false">
+         <children>
+            <Label prefHeight="22.0" prefWidth="146.0" text="Hadaf BAJ kieh?" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="tributePlayerButton1" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#tributePlayer1" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Player2" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="tributePlayerButton2" layoutX="24.0" layoutY="79.0" mnemonicParsing="false" onAction="#tributePlayer2" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Player3" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="tributePlayerButton3" layoutX="10.0" layoutY="260.0" mnemonicParsing="false" onAction="#tributePlayer3" prefHeight="44.0" prefWidth="190.0" style="-fx-background-color: #dc143c;" text="Player4" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="selectNewCardsVBox" alignment="TOP_CENTER" layoutX="897.0" layoutY="558.0" prefHeight="185.0" prefWidth="190.0" spacing="10.0" visible="false">
+         <children>
+            <Label fx:id="selectNewCardsLabel" prefHeight="22.0" prefWidth="174.0" text="2 kart entekhab kon" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="16.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="newCard1CheckBox" mnemonicParsing="false" text="Prince" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="newCard2CheckBox" layoutX="68.0" layoutY="43.0" mnemonicParsing="false" text="Prince" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="newCard3CheckBox" layoutX="68.0" layoutY="72.0" mnemonicParsing="false" text="Prince" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="newCard4CheckBox" layoutX="68.0" layoutY="102.0" mnemonicParsing="false" text="Prince" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="selectNewCardsButton" mnemonicParsing="false" onAction="#selectNewCards" prefHeight="44.0" prefWidth="190.0" style="-fx-background-color: #dc143c;" text="Entekhab" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="selectMurderTargetPlayerVBox" alignment="TOP_CENTER" layoutX="897.0" layoutY="557.0" prefHeight="191.0" prefWidth="190.0" spacing="10.0" visible="false">
+         <children>
+            <Label prefHeight="22.0" prefWidth="170.0" text="Hadaf GHATL kieh?" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="murderPlayerButton1" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#murderPlayer1" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Player2" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="murderPlayerButton2" layoutX="24.0" layoutY="79.0" mnemonicParsing="false" onAction="#murderPlayer2" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Player3" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="murderPlayerButton3" layoutX="10.0" layoutY="260.0" mnemonicParsing="false" onAction="#murderPlayer3" prefHeight="44.0" prefWidth="190.0" style="-fx-background-color: #dc143c;" text="Player4" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="selectCoupTargetPlayerVBox" alignment="TOP_CENTER" layoutX="897.0" layoutY="557.0" prefHeight="191.0" prefWidth="190.0" spacing="10.0" visible="false">
+         <children>
+            <Label prefHeight="22.0" prefWidth="182.0" text="Hadaf Koodeta kieh?" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="coupPlayerButton1" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#coupPlayer1" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Player2" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="coupPlayerButton2" layoutX="24.0" layoutY="79.0" mnemonicParsing="false" onAction="#coupPlayer2" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #dc143c;" text="Player3" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="coupPlayerButton3" layoutX="10.0" layoutY="260.0" mnemonicParsing="false" onAction="#coupPlayer3" prefHeight="44.0" prefWidth="190.0" style="-fx-background-color: #dc143c;" text="Player4" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="finishPane" prefHeight="794.0" prefWidth="1545.0" style="-fx-background-color: #181520;" visible="false">
+         <children>
+            <Label layoutX="568.0" layoutY="227.0" text="TAMAM" textAlignment="CENTER" textFill="#ff4242">
+               <font>
+                  <Font name="Montserrat Black" size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="572.0" layoutY="220.0" text="TAMAM" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Black" size="96.0" />
+               </font>
+            </Label>
+            <Label fx:id="winnerNickNameLabel" layoutX="619.0" layoutY="399.0" text="Winner Name" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="36.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="572.0" layoutY="405.0">
+               <image>
+                  <Image url="@Icons/trophy.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="startPane" layoutX="-9.0" prefHeight="794.0" prefWidth="1545.0" style="-fx-background-color: #181520;">
+         <children>
+            <Label layoutX="616.0" layoutY="167.0" text="COUP" textAlignment="CENTER" textFill="#ff4242">
+               <font>
+                  <Font name="Montserrat Black" size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="620.0" layoutY="160.0" text="COUP" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Black" size="96.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="startCard2ImageView" fitHeight="200.0" fitWidth="135.0" layoutX="820.0" layoutY="320.0">
+               <image>
+                  <Image url="@CardImages/backOfCard.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="startCard1ImageView" fitHeight="200.0" fitWidth="135.0" layoutX="586.0" layoutY="320.0">
+               <image>
+                  <Image url="@CardImages/backOfCard.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="717.0" layoutY="286.0" text="Kart Haye Shoma:" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Light" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="startGameButton" layoutX="586.0" layoutY="551.0" mnemonicParsing="false" onAction="#startGame" prefHeight="44.0" prefWidth="369.0" style="-fx-background-color: #dc143c;" text="Berim!" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

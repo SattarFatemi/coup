@@ -1,0 +1,10 @@
+[
+  {
+    "nickName": "Karbar",
+    "id": 0,
+    "coins": 2,
+    "cardIds": [0, 14],
+    "playerStatus": "IN",
+    "playerType": "HUMAN"
+  }
+]

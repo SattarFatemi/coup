@@ -1,0 +1,34 @@
+[
+  {
+    "nickName": "Koodetagar",
+    "id": 1,
+    "coins": 2,
+    "cardIds": [1, 13],
+    "playerStatus": "IN",
+    "playerType": "BOT"
+  },
+  {
+    "nickName": "Paranoid",
+    "id": 2,
+    "coins": 2,
+    "cardIds": [5, 12],
+    "playerStatus": "IN",
+    "playerType": "BOT"
+  },
+  {
+    "nickName": "GhateleMohtat",
+    "id": 3,
+    "coins": 2,
+    "cardIds": [3, 11],
+    "playerStatus": "IN",
+    "playerType": "BOT"
+  },
+  {
+    "nickName": "General",
+    "id": 4,
+    "coins": 2,
+    "cardIds": [8, 10],
+    "playerStatus": "IN",
+    "playerType": "BOT"
+  }
+]
